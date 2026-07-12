@@ -16,6 +16,10 @@ app.use(express.json());
 app.use("/", pageRoutes);
 app.use("/api", simplifyRoutes);
 
+app.use("/ping", (req,res) =>{
+  res.send("ping");
+})
+
 // ── 404 — Catch-all for unmatched routes ──────────────────
 app.use(function (req, res, next) {
   res.status(404).render("pages/error.ejs");

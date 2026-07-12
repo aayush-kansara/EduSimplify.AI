@@ -22,6 +22,10 @@ module.exports.generateContent = async (prompt) => {
     );
 
     if (!tokenResponse.ok) {
+        const errorText = await tokenResponse.text();
+
+        console.log("IBM TOKEN RESPONSE:");
+        console.log(errorText);
         throw new Error("Failed to generate IBM access token");
     }
 

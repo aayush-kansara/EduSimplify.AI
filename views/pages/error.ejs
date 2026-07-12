@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found | EduSimplify AI</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- IBM Plex Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Shared Site Styles -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Error Page Styles -->
+    <style>
+      .es-error-body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--es-gray-10);
+      }
+
+      .es-error-main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 7rem 1.5rem 4rem;
+      }
+
+      .es-error-card {
+        background-color: var(--es-white);
+        border: 1px solid var(--es-gray-20);
+        border-radius: var(--es-radius);
+        box-shadow: var(--es-shadow-lg);
+        padding: 3.5rem 3rem;
+        max-width: 560px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Background orb */
+      .es-error-orb {
+        position: absolute;
+        top: -80px;
+        right: -80px;
+        width: 240px;
+        height: 240px;
+        background: radial-gradient(circle, rgba(15, 98, 254, 0.07), transparent 65%);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .es-error-orb-2 {
+        top: auto;
+        right: auto;
+        bottom: -60px;
+        left: -60px;
+        width: 180px;
+        height: 180px;
+        background: radial-gradient(circle, rgba(8, 189, 186, 0.06), transparent 65%);
+      }
+
+      .es-error-content { position: relative; z-index: 1; }
+
+      .es-error-icon-wrap {
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--es-primary-light), #daeaff);
+        border: 2px solid rgba(15, 98, 254, 0.15);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.2rem;
+        color: var(--es-primary);
+        margin-bottom: 1.75rem;
+      }
+
+      .es-error-code {
+        font-family: var(--es-font-mono);
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--es-primary);
+        background-color: var(--es-primary-light);
+        padding: 0.35rem 0.9rem;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .es-error-title {
+        font-size: clamp(1.55rem, 4vw, 2rem);
+        font-weight: 700;
+        color: var(--es-ink);
+        margin-bottom: 0.85rem;
+        line-height: 1.2;
+      }
+
+      .es-error-desc {
+        font-size: 1rem;
+        color: var(--es-gray-70);
+        line-height: 1.7;
+        max-width: 420px;
+        margin: 0 auto 2.25rem;
+      }
+
+      .es-error-actions {
+        display: flex;
+        gap: 0.85rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* Illustration area */
+      .es-error-illustration {
+        margin-top: 2.25rem;
+        padding-top: 1.75rem;
+        border-top: 1px solid var(--es-gray-20);
+      }
+
+      .es-error-illustration-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+
+      .es-error-feature-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-family: var(--es-font-mono);
+        font-size: 0.72rem;
+        font-weight: 500;
+        color: var(--es-gray-70);
+        background-color: var(--es-gray-10);
+        border: 1px solid var(--es-gray-20);
+        padding: 0.35rem 0.8rem;
+        border-radius: 999px;
+        transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+      }
+      .es-error-feature-chip i { color: var(--es-primary); }
+
+      @media (max-width: 575.98px) {
+        .es-error-card { padding: 2.5rem 1.5rem; }
+      }
+    </style>
+  </head>
+  <body class="es-error-body">
+
+    <!-- ===================== NAVBAR (shared) ===================== -->
+    <%- include("../includes/header.ejs", { navType: 'error' }) %>
+
+    <!-- ===================== ERROR MAIN ===================== -->
+    <main class="es-error-main">
+      <div class="es-error-card">
+        <div class="es-error-orb"></div>
+        <div class="es-error-orb es-error-orb-2"></div>
+
+        <div class="es-error-content">
+          <!-- Icon -->
+          <div class="es-error-icon-wrap">
+            <i class="fa-solid fa-compass-drafting"></i>
+          </div>
+
+          <!-- Code badge -->
+          <div class="es-error-code">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            404 &mdash; Page Not Found
+          </div>
+
+          <!-- Heading -->
+          <h1 class="es-error-title">Oops! Wrong Turn.</h1>
+
+          <!-- Description -->
+          <p class="es-error-desc">
+            The page you are looking for does not exist or may have been moved.
+            Let&rsquo;s get you back on track.
+          </p>
+
+          <!-- Action buttons -->
+          <div class="es-error-actions">
+            <a href="/" class="btn es-btn-primary btn-lg px-4">
+              <i class="fa-solid fa-house me-2"></i>Go Home
+            </a>
+            <button type="button" class="btn es-btn-outline btn-lg px-4" onclick="history.back()">
+              <i class="fa-solid fa-arrow-left me-2"></i>Go Back
+            </button>
+          </div>
+
+          <!-- AI feature suggestion strip -->
+          <div class="es-error-illustration">
+            <p style="font-family:var(--es-font-mono);font-size:0.72rem;color:var(--es-gray-50);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.85rem;">
+              Available AI Features
+            </p>
+            <div class="es-error-illustration-row">
+              <span class="es-error-feature-chip">
+                <i class="fa-solid fa-compress"></i> Simplify
+              </span>
+              <span class="es-error-feature-chip">
+                <i class="fa-solid fa-book-bookmark"></i> Revision Notes
+              </span>
+              <span class="es-error-feature-chip">
+                <i class="fa-solid fa-layer-group"></i> Flashcards
+              </span>
+              <span class="es-error-feature-chip">
+                <i class="fa-solid fa-circle-question"></i> Quiz
+              </span>
+              <span class="es-error-feature-chip">
+                <i class="fa-solid fa-scale-balanced"></i> Compare Levels
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <%- include("../includes/footer.ejs") %>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

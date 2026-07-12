@@ -1,0 +1,111 @@
+<!-- ===================== SHARED NAVBAR =====================
+     Required locals:
+       navType  — "home" | "dashboard" | "error"
+     ===================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top es-navbar" id="mainNav">
+  <div class="container-fluid es-nav-container">
+
+    <!-- Brand -->
+    <a class="navbar-brand es-brand" href="/">
+      <div>
+      <span class="es-brand-mark"><i class="fa-solid fa-graduation-cap"></i></span>
+      EduSimplify<span class="es-brand-accent">.AI</span>
+      </div>
+    </a>
+
+    <% if (navType === 'home') { %>
+      <!-- Mobile toggler -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item">
+            <a class="nav-link es-nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link es-nav-link" href="#how-it-works">How It Works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link es-nav-link" href="#benefits">Benefits</a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a href="/simplify" class="btn es-btn-primary btn-sm px-3">
+              <i class="fa-solid fa-wand-magic-sparkles me-1"></i>Get Started
+            </a>
+          </li>
+          <li class="nav-item ms-lg-1">
+            <a
+              href="https://github.com/aayush-kansara/EduSimplify.AI.git"
+              class="nav-cta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-github"></i> GitHub Repo
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    <% } else if (navType === 'dashboard') { %>
+      <!-- Mobile toggler -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item ms-lg-2">
+            <a href="/" class="btn es-btn-primary btn-sm px-3">
+              <i class="fa-solid fa-house me-1"></i>Home
+            </a>
+          </li>
+          <li class="nav-item ms-lg-1">
+            <a
+              href="https://github.com/aayush-kansara/EduSimplify.AI.git"
+              class="nav-cta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-github"></i> GitHub Repo
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    <% } else { %>
+      <!-- error / fallback: minimal right-side -->
+      <div class="ms-auto d-flex align-items-center gap-2">
+        <a href="/" class="btn es-btn-primary btn-sm px-3">
+          <i class="fa-solid fa-house me-1"></i> Home
+        </a>
+        <a
+          href="https://github.com/aayush-kansara/EduSimplify.AI.git"
+          class="nav-cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-github"></i> GitHub Repo
+        </a>
+      </div>
+    <% } %>
+
+  </div>
+</nav>

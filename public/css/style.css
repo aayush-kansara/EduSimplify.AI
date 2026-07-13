@@ -383,6 +383,132 @@ a { text-decoration: none; }
 .es-benefit-desc { color: var(--es-gray-70); font-size: 0.92rem; margin-bottom: 0; }
 
 /* =========================================================
+   AI Learning Studio
+   ========================================================= */
+.es-studio {
+  background: linear-gradient(160deg, var(--es-white) 0%, var(--es-primary-light) 100%);
+}
+
+.es-studio-card {
+  background-color: var(--es-white);
+  border: 1px solid var(--es-gray-20);
+  border-radius: var(--es-radius);
+  padding: 1.75rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.es-studio-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--es-primary), var(--es-teal));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.es-studio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--es-shadow-lg);
+  border-color: rgba(15, 98, 254, 0.3);
+}
+.es-studio-card:hover::before { opacity: 1; }
+
+.es-studio-card--highlight {
+  border-color: rgba(15, 98, 254, 0.3);
+  background: linear-gradient(135deg, var(--es-primary-light), rgba(8, 189, 186, 0.06));
+}
+.es-studio-card--highlight::before { opacity: 1; }
+
+.es-studio-icon-wrap {
+  flex-shrink: 0;
+}
+.es-studio-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--es-radius);
+  background: linear-gradient(135deg, var(--es-primary-light), rgba(8, 189, 186, 0.12));
+  color: var(--es-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+.es-studio-card:hover .es-studio-icon {
+  background: linear-gradient(135deg, var(--es-primary), var(--es-primary-dark));
+  color: var(--es-white);
+  transform: scale(1.08);
+}
+
+.es-studio-body { flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
+.es-studio-title { font-size: 1.1rem; margin-bottom: 0; }
+.es-studio-desc { color: var(--es-gray-70); font-size: 0.94rem; margin-bottom: 0; flex: 1; }
+
+.es-studio-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--es-font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--es-primary);
+  background-color: var(--es-primary-light);
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  width: fit-content;
+  margin-top: auto;
+}
+.es-studio-badge--accent {
+  color: var(--es-teal);
+  background-color: rgba(8, 189, 186, 0.1);
+}
+
+/* =========================================================
+   IBM Technology Showcase Strip
+   ========================================================= */
+.es-tech-strip {
+  background-color: var(--es-ink);
+  padding: 3.5rem 0;
+}
+.es-tech-strip-heading {
+  font-family: var(--es-font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--es-gray-50);
+  margin-bottom: 0;
+}
+.es-tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--es-font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--es-gray-20);
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  cursor: default;
+}
+.es-tech-badge:hover {
+  background-color: rgba(15, 98, 254, 0.2);
+  border-color: rgba(15, 98, 254, 0.4);
+  color: #c8d8ff;
+}
+
+/* =========================================================
    CTA
    ========================================================= */
 .es-cta {

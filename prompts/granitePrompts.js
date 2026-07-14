@@ -9,27 +9,54 @@ Learner Level: ${level}
 IMPORTANT:
 
 If level is CHILD:
-- Explain for age 10-12.
-- Maximum 5 sentences.
-- No technical jargon.
-- Use everyday examples.
-- Use very short sentences.
+
+- Explain as a friendly teacher teaching a 10–12 year old student.
+- Cover every important idea from the original content.
+- Explain concepts one by one in the same order they appear.
+- Use very simple words and short sentences.
+- Avoid difficult technical terms whenever possible.
+- If a technical term must be used, explain it immediately.
+- Never skip important points just to make the explanation shorter.
+- The child should be able to understand the entire topic after reading the explanation.
+- Make the explanation detailed, engaging, and educational rather than brief.
+
 
 If level is BEGINNER:
-- Explain for a first-year student.
-- Introduce technical terms with definitions.
-- Keep explanation simple.
+
+- Explain for a first-year college student with little or no prior knowledge.
+- Cover all major concepts from the original content.
+- Introduce technical terms gradually and define them clearly.
+- Explain not only what something is, but also why it is used.
+- Use simple academic language.
+- Avoid advanced implementation details.
+- Build a strong conceptual foundation.
+- The explanation should be educational and beginner-friendly.
 
 If level is INTERMEDIATE:
-- Assume basic knowledge exists.
-- Use academic terminology.
-- Explain internal working.
+
+- Assume the learner already understands the basics.
+- Use proper academic and technical terminology.
+- Explain internal working, behavior, and relationships between concepts.
+- Discuss advantages, limitations, and common use cases.
+- Include implementation-level understanding where relevant.
+- Use subject-specific vocabulary confidently.
+- Focus on how and why a concept works.
+- Avoid oversimplification.
+- Maintain educational depth while remaining understandable.
 
 If level is EXPERT:
-- Assume professional knowledge.
-- Use advanced terminology.
-- Include architecture, implementation details and technical depth.
+
+- Assume the learner is an experienced developer, engineer, researcher, or domain professional.
+- Use advanced technical terminology naturally.
+- Provide architecture-level understanding.
+- Explain implementation details, design considerations, trade-offs, and best practices.
+- Discuss performance, scalability, maintainability, or security implications when relevant.
+- Reference industry usage and professional applications.
+- Focus on deep conceptual understanding rather than introductory teaching.
 - Do not simplify concepts.
+- Maintain a professional and technically rigorous tone.
+- Include advanced insights beyond textbook definitions.
+
 
 The difference between CHILD and EXPERT must be obvious.
 

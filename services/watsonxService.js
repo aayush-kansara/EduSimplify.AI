@@ -24,8 +24,8 @@ module.exports.generateContent = async (prompt) => {
     if (!tokenResponse.ok) {
         const errorText = await tokenResponse.text();
 
-        console.log("IBM TOKEN RESPONSE:");
-        console.log(errorText);
+        // console.log("IBM TOKEN RESPONSE:");
+        // console.log(errorText);
         throw new Error("Failed to generate IBM access token");
     }
 
@@ -78,8 +78,8 @@ module.exports.generateContent = async (prompt) => {
 
 const aiResponse = result.choices[0].message.content;
 
-console.log("AI RESPONSE:");
-console.log(aiResponse);
+// console.log("AI RESPONSE:");
+// console.log(aiResponse);
 
 let cleanedResponse = aiResponse
     .replace(/```json/g, "")
